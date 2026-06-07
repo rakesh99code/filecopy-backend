@@ -13,7 +13,6 @@ await connectDB();
 const PORT = process.env.PORT || 4000;
 
 const app = express();
-app.set('trust proxy', 1)
 app.use(cookieParser(process.env.SESSION_SECRET));
 app.use(express.json());
 app.use(
