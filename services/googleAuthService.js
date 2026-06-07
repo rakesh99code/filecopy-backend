@@ -9,7 +9,7 @@ const client = new OAuth2Client({
 export async function verifyIdToken(idToken) {
   const loginTicket = await client.verifyIdToken({
     idToken,
-    audience: clientId,
+    requiredAudience: clientId,
   });
 
   const userData = loginTicket.getPayload();
